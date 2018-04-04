@@ -57,7 +57,7 @@
             }
         });
     }
-    
+
     welcomeSlide.on('translate.owl.carousel', function () {
         var slideLayer = $("[data-animation]");
         slideLayer.each(function () {
@@ -83,7 +83,7 @@
         var anim_dur = $(this).data('duration');
         $(this).css('animation-duration', anim_dur);
     });
-    
+
     // Marquee Active Code
     if ($.fn.SimpleMarquee) {
         $('.simple-marquee-container').SimpleMarquee({
@@ -95,7 +95,7 @@
             hover: true
         });
     }
-    
+
     // Editorial Post Slides
     if ($.fn.owlCarousel) {
         $('.editorial-post-slides').owlCarousel({
@@ -145,5 +145,15 @@
     if ($window.width() > 767) {
         new WOW().init();
     }
+
+    //login on click activates login Fullscreen
+  $(".btn-login").click(function(e){
+      tp.pianoID.show(screen);
+  });
+
+  //register on click activates login Fullscreen
+$(".btn-register").click(function(e){
+      tp.pianoID.show(register);
+});
 
 })(jQuery);
