@@ -153,7 +153,15 @@
 
   //register on click activates login Fullscreen
 $(".btn-register").click(function(e){
-      tp.pianoID.show(register);
+  tp.pianoId.show({
+    disableSignUp: true,
+    displayMode: 'inline',
+    screen: 'login',
+    containerSelector: '#login-form',
+    loggedIn: function(data) {
+        console.log('user ', data.user, ' logged in with token', data.token);
+    }
+  });
 });
 
 })(jQuery);
