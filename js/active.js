@@ -146,10 +146,10 @@
         new WOW().init();
     }
 
-
-tp=window.top || [];
+tp=window.tp || [];
     //login on click activates login Fullscreen
 tp.push(["init", function(){
+
   $(".btn-login").click(function(e){
     tp.pianoId.show({
       disableSignUp: true,
@@ -159,6 +159,7 @@ tp.push(["init", function(){
           console.log('user ', data.user, ' logged in with token', data.token);
       }
   });
+});
 
   //register on click activates login Fullscreen
   $(".btn-register").click(function(e){
@@ -170,8 +171,7 @@ tp.push(["init", function(){
         console.log('user ', data.user, ' logged in with token', data.token);
     }
   });
-  });
+});
 }]);
-
 
 })(jQuery);
