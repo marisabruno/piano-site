@@ -20,7 +20,36 @@
 
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
-    <script>(function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("https://sandbox.tinypass.com/xbuilder/experience/load?aid=nbENN4PsNy");</script>
+    <script>
+    tp=window.tp || [];
+        //login on click activates login Fullscreen
+    tp.push(["init", function(){
+
+      $(".btn-login").click(function(e){
+        tp.pianoId.show("login");
+      //   tp.pianoId.show({
+      //     disableSignUp: true,
+      //     displayMode: 'modal',
+      //     screen: 'login',
+      //     loggedIn: function(data) {
+      //         console.log('user ', data.user, ' logged in with token', data.token);
+      //     }
+      // });
+    });
+
+      //register on click activates login Fullscreen
+      $(".btn-register").click(function(e){
+      tp.pianoId.show({
+        disableSignUp: true,
+        displayMode: 'modal',
+        screen: 'register',
+        loggedIn: function(data) {
+            console.log('user ', data.user, ' logged in with token', data.token);
+        }
+      });
+    });
+    }]);
+  </script>
 
 
 </head>
@@ -942,6 +971,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Active js -->
     <script src="js/active.js"></script>
 
+<script>(function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("https://sandbox.tinypass.com/xbuilder/experience/load?aid=nbENN4PsNy");</script>
 </body>
 
 </html>
