@@ -151,14 +151,15 @@ tp=window.tp || [];
 tp.push(["init", function(){
 
   $(".btn-login").click(function(e){
-    tp.pianoId.show({
-      disableSignUp: true,
-      displayMode: 'modal',
-      screen: 'login',
-      loggedIn: function(data) {
-          console.log('user ', data.user, ' logged in with token', data.token);
-      }
-  });
+    tp.pianoId.show("login");
+  //   tp.pianoId.show({
+  //     disableSignUp: true,
+  //     displayMode: 'modal',
+  //     screen: 'login',
+  //     loggedIn: function(data) {
+  //         console.log('user ', data.user, ' logged in with token', data.token);
+  //     }
+  // });
 });
 
   //register on click activates login Fullscreen
